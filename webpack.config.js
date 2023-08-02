@@ -61,8 +61,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "/src/template.html"),
       filename: "index.html",
-      title: "My Webpack File",
-      myPageHeader: "Hello World",
+      title: "My Weather App",
+      // myPageHeader: "Hello World",
     }),
     // new BundleAnalyzerPlugin(),
   ],

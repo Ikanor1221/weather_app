@@ -2,6 +2,70 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/controller.js":
+/*!***************************!*\
+  !*** ./src/controller.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createController(model, view) {
+  function initializePage() {
+    view.renderInitialPage();
+  }
+  return {
+    initializePage: initializePage
+  };
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createController);
+
+/***/ }),
+
+/***/ "./src/model.js":
+/*!**********************!*\
+  !*** ./src/model.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createModel() {
+  return {};
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createModel);
+
+/***/ }),
+
+/***/ "./src/view.js":
+/*!*********************!*\
+  !*** ./src/view.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _assets_favicon_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/favicon.png */ "./src/assets/favicon.png");
+
+function createView() {
+  function renderInitialPage() {
+    var faviconElement = document.getElementById("faviconElement");
+    faviconElement.href = _assets_favicon_png__WEBPACK_IMPORTED_MODULE_0__;
+  }
+  return {
+    renderInitialPage: renderInitialPage
+  };
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createView);
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
@@ -557,13 +621,13 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/assets/favicon.ico":
+/***/ "./src/assets/favicon.png":
 /*!********************************!*\
-  !*** ./src/assets/favicon.ico ***!
+  !*** ./src/assets/favicon.png ***!
   \********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "favicon.ico";
+module.exports = __webpack_require__.p + "favicon.png";
 
 /***/ })
 
@@ -684,18 +748,20 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _assets_favicon_ico__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/favicon.ico */ "./src/assets/favicon.ico");
+/* harmony import */ var _model_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./model.js */ "./src/model.js");
+/* harmony import */ var _view_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./view.js */ "./src/view.js");
+/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./controller */ "./src/controller.js");
 
 
 
 
-// import joke from "./generateJoke";
-// import laughing from "./assets/Laughing-Emoji.png";
 
-var faviconElement = document.getElementById("faviconElement");
-faviconElement.href = _assets_favicon_ico__WEBPACK_IMPORTED_MODULE_2__;
+var model = (0,_model_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+var view = (0,_view_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
+var controller = (0,_controller__WEBPACK_IMPORTED_MODULE_4__["default"])(model, view);
+controller.initializePage();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.c5216ef2af8e4042bfdb.js.map
+//# sourceMappingURL=bundle.8c293026a9a4289f622d.js.map

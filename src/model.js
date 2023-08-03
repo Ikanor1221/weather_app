@@ -2,4 +2,4 @@ function createModel() {
   return {};
 }
 
-export default createModel
+export default createModel;

@@ -1,5 +1,11 @@
+import favicon from "./assets/favicon.png";
+
 function createView() {
-  return {};
+  function renderInitialPage() {
+    const faviconElement = document.getElementById("faviconElement");
+    faviconElement.href = favicon;
+  }
+  return { renderInitialPage };
 }
 
 export default createView;

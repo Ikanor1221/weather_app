@@ -1,10 +1,11 @@
-import joke from "./generateJoke";
 import "./styles/main.css";
 import "./styles/main.scss";
-import laughing from "./assets/Laughing-Emoji.png";
 
-console.log(joke);
+import createModel from "./model.js";
+import createView from "./view.js";
+import createController from "./controller";
 
-const laughingImg = document.getElementById("laughingImg");
+import favicon from "./assets/favicon.png";
 
-laughingImg.src = laughing;
+const faviconElement = document.getElementById("faviconElement");
+faviconElement.href = favicon;

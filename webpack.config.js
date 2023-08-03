@@ -51,7 +51,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: "asset/resource",
       },
     ],
@@ -61,7 +61,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "/src/template.html"),
       filename: "index.html",
-      title: "My Weather App",
+      title: "MyWeatherApp",
       // myPageHeader: "Hello World",
     }),
     // new BundleAnalyzerPlugin(),

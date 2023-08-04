@@ -2,12 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>&#9728;&#65039</text></svg>"> -->
-    <link rel="icon" type="image/png" id="faviconElement" type="image/x-icon" href="">
-    <title>MyWeatherApp</title>
-  <script defer src="bundle.8c293026a9a4289f622d.js"></script></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" href="<%= htmlWebpackPlugin.options.favicon %>" />
+    <link rel="icon" type="image/png" id="favicon_element" type="image/x-icon" href="">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  <script defer src="bundle.3a88179d0fabb07060e3.js"></script></head>
   <body>
-    <h1>&#9728;&#65039MyWeatherApp</h1>
+    <h1>&#9728;&#65039<%= htmlWebpackPlugin.options.title %></h1>
+    <div id="main_container">
+      <form action="" id="menu">
+        menu
+      </form>
+      <div id="display">
+        <img src="test_weather.e6663ab6322a5eaec1d6..png" alt="">
+        Display
+      </div>
+    </div>
   </body>
 </html>

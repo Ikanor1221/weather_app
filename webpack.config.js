@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -14,7 +15,7 @@ module.exports = {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: "[name].[contenthash].[ext]",
   },
 
   devtool: "source-map",
@@ -54,6 +55,10 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.(html)$/,
+        use: ["html-loader"],
+      },
     ],
   },
 
@@ -62,8 +67,12 @@ module.exports = {
       template: path.resolve(__dirname, "/src/template.html"),
       filename: "index.html",
       title: "MyWeatherApp",
-      // myPageHeader: "Hello World",
     }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     { from: "./src/assets/startup_images", to: "./assets/startup_images" },
+    //   ],
+    // }),
     // new BundleAnalyzerPlugin(),
   ],
 };

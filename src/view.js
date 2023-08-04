@@ -1,4 +1,4 @@
-import favicon from "./assets/favicon.png";
+import favicon from "./assets/favicon.ico";
 
 function createView() {
   function renderInitialPage() {

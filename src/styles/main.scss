@@ -1,5 +1,10 @@
 $body-color: rgb(165, 177, 179);
 $font-color1: rgb(0, 0, 0);
+$default_shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+
+:root {
+    font-size: 16px;
+}
 
 @font-face {
     font-family: "Oswald";
@@ -14,7 +19,8 @@ $font-color1: rgb(0, 0, 0);
     // border: 1px rgb(75, 75, 75) solid;
     border-radius: 10px;
     background-color: $bg_color;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: $default_shadow;
+    border: none;
 }
 
 * {
@@ -50,6 +56,7 @@ body {
     gap: 20px;
     @include theme;
     padding: 20px;
+    min-width: fit-content;
 }
 
 h1 {
@@ -69,17 +76,52 @@ h1 {
 
 #menu {
     @include theme;
-    width: 600px;
     max-width: 100%;
-    height: 100px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 
     * {
         font-size: 1.5rem;
     }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
+#search_field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    @include theme(rgba(255, 254, 254));
+    border-radius: 4px;
+    width: 200px;
+    height: auto;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    @include theme(rgba(255, 254, 254));
+    border-radius: 4px;
+}
+
+button:hover,
+#search_field:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 #display {
@@ -101,4 +143,20 @@ h1 {
     align-items: center;
     flex-direction: column;
     gap: 5px;
+    * {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        font-size: 10px;
+    }
+
+    #menu {
+        flex-direction: column;
+        input {
+            max-width: 40vw;
+        }
+    }
 }

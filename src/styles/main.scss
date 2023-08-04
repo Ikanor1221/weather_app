@@ -16,7 +16,6 @@ $default_shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 @mixin theme($bg_color: rgba(236, 236, 236, 0.829)) {
-    // border: 1px rgb(75, 75, 75) solid;
     border-radius: 10px;
     background-color: $bg_color;
     box-shadow: $default_shadow;
@@ -36,9 +35,9 @@ $default_shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 body {
     background: $body-color;
     background: linear-gradient(0deg, rgba(179, 179, 198, 1) 0%, rgba(207, 217, 219, 1) 0%, rgb(123, 205, 250) 35%);
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
-    padding: 40px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,6 +55,7 @@ body {
     gap: 20px;
     @include theme;
     padding: 20px;
+
     min-width: fit-content;
 }
 
@@ -65,7 +65,6 @@ h1 {
     align-items: center;
     padding: 10px;
     max-width: 100%;
-
     color: $font-color1;
     font-size: 3rem;
     @include theme;
@@ -84,7 +83,7 @@ h1 {
     gap: 15px;
 
     * {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     div {
@@ -126,17 +125,18 @@ button:hover {
 
 #display {
     @include theme;
-    width: 600px;
     max-width: 100%;
     height: auto;
+    width: auto;
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
     gap: 10px;
 }
 
 .card {
-    @include theme(rgba(156, 154, 154, 0.7));
+    @include theme(rgba(189, 189, 189, 0.212));
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -144,7 +144,12 @@ button:hover {
     flex-direction: column;
     gap: 5px;
     * {
-        font-size: 1.5rem;
+        font-size: 25px;
+    }
+
+    img {
+        height: 120px;
+        @include theme(rgba(168, 168, 168, 0.514));
     }
 }
 
@@ -155,8 +160,16 @@ button:hover {
 
     #menu {
         flex-direction: column;
-        input {
-            max-width: 40vw;
+        width: 100%;
+        div {
+            width: 100%;
+            #search_field {
+                width: 100%;
+            }
         }
+    }
+
+    h1 {
+        width: 100%;
     }
 }

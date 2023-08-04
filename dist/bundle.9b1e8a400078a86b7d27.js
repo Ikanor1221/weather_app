@@ -108,11 +108,6 @@ body {
   gap: 20px;
 }
 
-h1 {
-  color: rgb(0, 0, 0);
-  font-size: 3rem;
-}
-
 #main_container {
   flex: 1;
   width: 100%;
@@ -121,27 +116,35 @@ h1 {
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
+  border: 1px rgb(75, 75, 75) solid;
+  border-radius: 10px;
+  background-color: rgba(236, 236, 236, 0.7);
+  padding: 20px;
 }
-#main_container #menu {
-  width: 100%;
-  height: 100px;
-}
-#main_container #display {
-  width: 100%;
-  height: 100px;
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  border: 1px rgb(75, 75, 75) solid;
+  border-radius: 10px;
+  background-color: rgba(236, 236, 236, 0.7);
 }
 
 #menu {
   border: 1px rgb(75, 75, 75) solid;
   border-radius: 10px;
   background-color: rgba(236, 236, 236, 0.7);
+  width: 100%;
+  height: 100px;
 }
 
 #display {
   border: 1px rgb(75, 75, 75) solid;
   border-radius: 10px;
   background-color: rgba(236, 236, 236, 0.7);
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AASA;EACI,WAAA;EACA,YAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;EACA,mBAdU;EAeV,oBAAA;AARJ;;AAWA;EACI,8BApBS;EAqBT,uGAAA;EACA,gBAAA;EACA,iBAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AARJ;;AAWA;EACI,mBAhCU;EAiCV,eAAA;AARJ;;AAWA;EACI,OAAA;EACA,WAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA;EACA,SAAA;AARJ;AAUI;EACI,WAAA;EACA,aAAA;AARR;AAWI;EACI,WAAA;EACA,aAAA;AATR;;AAaA;EArDI,iCAAA;EACA,mBAAA;EACA,0CAAA;AA4CJ;;AAWA;EAzDI,iCAAA;EACA,mBAAA;EACA,0CAAA;AAkDJ","sourcesContent":["$body-color: rgb(165, 177, 179);\n$font-color1: rgb(0, 0, 0);\n\n@mixin theme() {\n    border: 1px rgb(75, 75, 75) solid;\n    border-radius: 10px;\n    background-color: rgba(236, 236, 236, 0.7);\n}\n\n* {\n    margin: 0px;\n    padding: 0px;\n    box-sizing: border-box;\n    font-size: 1rem;\n    text-decoration: none;\n    color: $font-color1;\n    font-family: inherit;\n}\n\nbody {\n    background: $body-color;\n    background: linear-gradient(0deg, rgba(179, 179, 198, 1) 0%, rgba(207, 217, 219, 1) 0%, rgb(123, 205, 250) 35%);\n    min-width: 100vw;\n    min-height: 100vh;\n    padding: 40px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 20px;\n}\n\nh1 {\n    color: $font-color1;\n    font-size: 3rem;\n}\n\n#main_container {\n    flex: 1;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    gap: 20px;\n\n    #menu {\n        width: 100%;\n        height: 100px;\n    }\n\n    #display {\n        width: 100%;\n        height: 100px;\n    }\n}\n\n#menu {\n    @include theme;\n}\n\n#display {\n    @include theme;\n}\n"],"sourceRoot":""}]);
+  width: 100%;
+  height: 100px;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AASA;EACI,WAAA;EACA,YAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;EACA,mBAdU;EAeV,oBAAA;AARJ;;AAWA;EACI,8BApBS;EAqBT,uGAAA;EACA,gBAAA;EACA,iBAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AARJ;;AAWA;EACI,OAAA;EACA,WAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA;EACA,SAAA;EAnCA,iCAAA;EACA,mBAAA;EACA,0CAAA;EAmCA,aAAA;AANJ;;AASA;EACI,mBA5CU;EA6CV,eAAA;EA1CA,iCAAA;EACA,mBAAA;EACA,0CAAA;AAqCJ;;AAOA;EA9CI,iCAAA;EACA,mBAAA;EACA,0CAAA;EA8CA,WAAA;EACA,aAAA;AAFJ;;AAKA;EApDI,iCAAA;EACA,mBAAA;EACA,0CAAA;EAoDA,WAAA;EACA,aAAA;AAAJ","sourcesContent":["$body-color: rgb(165, 177, 179);\n$font-color1: rgb(0, 0, 0);\n\n@mixin theme() {\n    border: 1px rgb(75, 75, 75) solid;\n    border-radius: 10px;\n    background-color: rgba(236, 236, 236, 0.7);\n}\n\n* {\n    margin: 0px;\n    padding: 0px;\n    box-sizing: border-box;\n    font-size: 1rem;\n    text-decoration: none;\n    color: $font-color1;\n    font-family: inherit;\n}\n\nbody {\n    background: $body-color;\n    background: linear-gradient(0deg, rgba(179, 179, 198, 1) 0%, rgba(207, 217, 219, 1) 0%, rgb(123, 205, 250) 35%);\n    min-width: 100vw;\n    min-height: 100vh;\n    padding: 40px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 20px;\n}\n\n#main_container {\n    flex: 1;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    gap: 20px;\n    @include theme;\n    padding: 20px;\n}\n\nh1 {\n    color: $font-color1;\n    font-size: 3rem;\n    @include theme;\n}\n\n#menu {\n    @include theme;\n    width: 100%;\n    height: 100px;\n}\n\n#display {\n    @include theme;\n    width: 100%;\n    height: 100px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -818,4 +821,4 @@ controller.initializePage();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.3a88179d0fabb07060e3.js.map
+//# sourceMappingURL=bundle.9b1e8a400078a86b7d27.js.map

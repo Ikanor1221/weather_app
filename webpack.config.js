@@ -66,7 +66,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "/src/template.html"),
       filename: "index.html",
-      title: "MyWeatherApp",
+      // title: "MyWeatherApp",
     }),
     // new CopyWebpackPlugin({
     //   patterns: [

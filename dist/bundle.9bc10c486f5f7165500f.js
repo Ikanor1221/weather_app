@@ -80,19 +80,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/Oswald-VariableFont_wght.ttf */ "./src/assets/Oswald-VariableFont_wght.ttf"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `* {
+___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
+  font-family: "myFirstFont";
+  src: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-size: 1rem;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-family: inherit;
+  font-family: "myFirstFont";
 }
 
 body {
@@ -116,38 +125,65 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  border: 1px rgb(75, 75, 75) solid;
   border-radius: 10px;
-  background-color: rgba(236, 236, 236, 0.7);
+  background-color: rgba(236, 236, 236, 0.829);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   color: rgb(0, 0, 0);
   font-size: 3rem;
-  border: 1px rgb(75, 75, 75) solid;
   border-radius: 10px;
-  background-color: rgba(236, 236, 236, 0.7);
+  background-color: rgba(236, 236, 236, 0.829);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 h1 img {
   height: 3rem;
 }
 
 #menu {
-  border: 1px rgb(75, 75, 75) solid;
   border-radius: 10px;
-  background-color: rgba(236, 236, 236, 0.7);
-  width: 100%;
+  background-color: rgba(236, 236, 236, 0.829);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 600px;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#menu * {
+  font-size: 1.5rem;
 }
 
 #display {
-  border: 1px rgb(75, 75, 75) solid;
   border-radius: 10px;
-  background-color: rgba(236, 236, 236, 0.7);
-  width: 100%;
-  height: 100px;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AASA;EACI,WAAA;EACA,YAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;EACA,mBAdU;EAeV,oBAAA;AARJ;;AAWA;EACI,8BApBS;EAqBT,uGAAA;EACA,gBAAA;EACA,iBAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AARJ;;AAWA;EACI,OAAA;EACA,WAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA;EACA,SAAA;EAnCA,iCAAA;EACA,mBAAA;EACA,0CAAA;EAmCA,aAAA;AANJ;;AASA;EACI,mBA5CU;EA6CV,eAAA;EA1CA,iCAAA;EACA,mBAAA;EACA,0CAAA;AAqCJ;AAKI;EACI,YAAA;AAHR;;AAOA;EAjDI,iCAAA;EACA,mBAAA;EACA,0CAAA;EAiDA,WAAA;EACA,aAAA;AAFJ;;AAKA;EAvDI,iCAAA;EACA,mBAAA;EACA,0CAAA;EAuDA,WAAA;EACA,aAAA;AAAJ","sourcesContent":["$body-color: rgb(165, 177, 179);\n$font-color1: rgb(0, 0, 0);\n\n@mixin theme() {\n    border: 1px rgb(75, 75, 75) solid;\n    border-radius: 10px;\n    background-color: rgba(236, 236, 236, 0.7);\n}\n\n* {\n    margin: 0px;\n    padding: 0px;\n    box-sizing: border-box;\n    font-size: 1rem;\n    text-decoration: none;\n    color: $font-color1;\n    font-family: inherit;\n}\n\nbody {\n    background: $body-color;\n    background: linear-gradient(0deg, rgba(179, 179, 198, 1) 0%, rgba(207, 217, 219, 1) 0%, rgb(123, 205, 250) 35%);\n    min-width: 100vw;\n    min-height: 100vh;\n    padding: 40px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 20px;\n}\n\n#main_container {\n    flex: 1;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    gap: 20px;\n    @include theme;\n    padding: 20px;\n}\n\nh1 {\n    color: $font-color1;\n    font-size: 3rem;\n    @include theme;\n    img {\n        height: 3rem;\n    }\n}\n\n#menu {\n    @include theme;\n    width: 100%;\n    height: 100px;\n}\n\n#display {\n    @include theme;\n    width: 100%;\n    height: 100px;\n}\n"],"sourceRoot":""}]);
+  background-color: rgba(236, 236, 236, 0.829);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  height: auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: rgba(156, 154, 154, 0.7);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAGA;EACI,0BAAA;EACA,4CAAA;AAFJ;AAgBA;EACI,WAAA;EACA,YAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;EACA,mBAxBU;EA4BV,0BAAA;AAjBJ;;AAwBA;EACI,8BArCS;EAsCT,uGAAA;EACA,gBAAA;EACA,iBAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AArBJ;;AAwBA;EACI,OAAA;EACA,WAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA;EACA,SAAA;EA1CA,mBAAA;EACA,4CAHoB;EAIpB,yCAAA;EA0CA,aAAA;AAnBJ;;AAsBA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EAEA,mBAlEU;EAmEV,eAAA;EAtDA,mBAAA;EACA,4CAHoB;EAIpB,yCAAA;AAmCJ;AAmBI;EACI,YAAA;AAjBR;;AAqBA;EA7DI,mBAAA;EACA,4CAHoB;EAIpB,yCAAA;EA6DA,YAAA;EACA,aAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,SAAA;AAhBJ;AAkBI;EACI,iBAAA;AAhBR;;AAoBA;EA3EI,mBAAA;EACA,4CAHoB;EAIpB,yCAAA;EA2EA,YAAA;EACA,YAAA;EACA,aAAA;EACA,aAAA;EACA,kCAAA;EACA,SAAA;AAfJ;;AAkBA;EArFI,mBAAA;EACA,0CAqFe;EApFf,yCAAA;EAuFA,aAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,sBAAA;EACA,QAAA;AAfJ","sourcesContent":["$body-color: rgb(165, 177, 179);\n$font-color1: rgb(0, 0, 0);\n\n@font-face {\n    font-family: \"myFirstFont\";\n    src: url(\"../assets/Oswald-VariableFont_wght.ttf\");\n}\n\n// * {\n//     font-family: Georgia, serif;\n// }\n\n@mixin theme($bg_color: rgba(236, 236, 236, 0.829)) {\n    // border: 1px rgb(75, 75, 75) solid;\n    border-radius: 10px;\n    background-color: $bg_color;\n    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);\n}\n\n* {\n    margin: 0px;\n    padding: 0px;\n    box-sizing: border-box;\n    font-size: 1rem;\n    text-decoration: none;\n    color: $font-color1;\n    // font-family: inherit;\n    // font-family: monospace;\n    // font-family: sans-serif;\n    font-family: \"myFirstFont\";\n}\n\np {\n    // font-family: monospace;\n}\n\nbody {\n    background: $body-color;\n    background: linear-gradient(0deg, rgba(179, 179, 198, 1) 0%, rgba(207, 217, 219, 1) 0%, rgb(123, 205, 250) 35%);\n    min-width: 100vw;\n    min-height: 100vh;\n    padding: 40px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 20px;\n}\n\n#main_container {\n    flex: 1;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    gap: 20px;\n    @include theme;\n    padding: 20px;\n}\n\nh1 {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 10px;\n\n    color: $font-color1;\n    font-size: 3rem;\n    @include theme;\n    img {\n        height: 3rem;\n    }\n}\n\n#menu {\n    @include theme;\n    width: 600px;\n    height: 100px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 10px;\n\n    * {\n        font-size: 1.5rem;\n    }\n}\n\n#display {\n    @include theme;\n    width: 600px;\n    height: auto;\n    padding: 10px;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    gap: 10px;\n}\n\n.card {\n    @include theme(rgba(156, 154, 154, 0.7));\n    // width: max-content;\n    // height: max-content;\n    padding: 10px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n    gap: 5px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -277,6 +313,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -681,6 +752,16 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/assets/Oswald-VariableFont_wght.ttf":
+/*!*************************************************!*\
+  !*** ./src/assets/Oswald-VariableFont_wght.ttf ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "Oswald-VariableFont_wght.46d7853f0185f6bf0c93..ttf";
+
+/***/ }),
+
 /***/ "./src/assets/favicon.ico":
 /*!********************************!*\
   !*** ./src/assets/favicon.ico ***!
@@ -716,6 +797,9 @@ module.exports = __webpack_require__.p + "favicon.96851ba3279201744cc8..ico";
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -793,6 +877,32 @@ module.exports = __webpack_require__.p + "favicon.96851ba3279201744cc8..ico";
 /******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"bundle": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -824,4 +934,4 @@ controller.initializePage();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.2391b8fa11504a3a02f4.js.map
+//# sourceMappingURL=bundle.9bc10c486f5f7165500f.js.map

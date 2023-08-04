@@ -51,12 +51,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _assets_favicon_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/favicon.png */ "./src/assets/favicon.png");
+/* harmony import */ var _assets_favicon_ico__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/favicon.ico */ "./src/assets/favicon.ico");
 
 function createView() {
   function renderInitialPage() {
-    var faviconElement = document.getElementById("faviconElement");
-    faviconElement.href = _assets_favicon_png__WEBPACK_IMPORTED_MODULE_0__;
+    var faviconElement = document.getElementById("favicon_element");
+    faviconElement.href = _assets_favicon_ico__WEBPACK_IMPORTED_MODULE_0__;
   }
   return {
     renderInitialPage: renderInitialPage
@@ -85,9 +85,63 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body {
-  background-color: green;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAEA;EACI,uBAHS;AAEb","sourcesContent":["$body-color: green;\n\nbody {\n    background-color: $body-color;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: inherit;
+}
+
+body {
+  background: rgb(165, 177, 179);
+  background: linear-gradient(0deg, rgb(179, 179, 198) 0%, rgb(207, 217, 219) 0%, rgb(123, 205, 250) 35%);
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+}
+
+#main_container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+#main_container #menu {
+  width: 100%;
+  height: 100px;
+}
+#main_container #display {
+  width: 100%;
+  height: 100px;
+}
+
+#menu {
+  border: 1px rgb(75, 75, 75) solid;
+  border-radius: 10px;
+  background-color: rgba(236, 236, 236, 0.7);
+}
+
+#display {
+  border: 1px rgb(75, 75, 75) solid;
+  border-radius: 10px;
+  background-color: rgba(236, 236, 236, 0.7);
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AASA;EACI,WAAA;EACA,YAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;EACA,mBAdU;EAeV,oBAAA;AARJ;;AAWA;EACI,8BApBS;EAqBT,uGAAA;EACA,gBAAA;EACA,iBAAA;EACA,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AARJ;;AAWA;EACI,mBAhCU;EAiCV,eAAA;AARJ;;AAWA;EACI,OAAA;EACA,WAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA;EACA,SAAA;AARJ;AAUI;EACI,WAAA;EACA,aAAA;AARR;AAWI;EACI,WAAA;EACA,aAAA;AATR;;AAaA;EArDI,iCAAA;EACA,mBAAA;EACA,0CAAA;AA4CJ;;AAWA;EAzDI,iCAAA;EACA,mBAAA;EACA,0CAAA;AAkDJ","sourcesContent":["$body-color: rgb(165, 177, 179);\n$font-color1: rgb(0, 0, 0);\n\n@mixin theme() {\n    border: 1px rgb(75, 75, 75) solid;\n    border-radius: 10px;\n    background-color: rgba(236, 236, 236, 0.7);\n}\n\n* {\n    margin: 0px;\n    padding: 0px;\n    box-sizing: border-box;\n    font-size: 1rem;\n    text-decoration: none;\n    color: $font-color1;\n    font-family: inherit;\n}\n\nbody {\n    background: $body-color;\n    background: linear-gradient(0deg, rgba(179, 179, 198, 1) 0%, rgba(207, 217, 219, 1) 0%, rgb(123, 205, 250) 35%);\n    min-width: 100vw;\n    min-height: 100vh;\n    padding: 40px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 20px;\n}\n\nh1 {\n    color: $font-color1;\n    font-size: 3rem;\n}\n\n#main_container {\n    flex: 1;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    gap: 20px;\n\n    #menu {\n        width: 100%;\n        height: 100px;\n    }\n\n    #display {\n        width: 100%;\n        height: 100px;\n    }\n}\n\n#menu {\n    @include theme;\n}\n\n#display {\n    @include theme;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -621,13 +675,13 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/assets/favicon.png":
+/***/ "./src/assets/favicon.ico":
 /*!********************************!*\
-  !*** ./src/assets/favicon.png ***!
+  !*** ./src/assets/favicon.ico ***!
   \********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "favicon.png";
+module.exports = __webpack_require__.p + "favicon.96851ba3279201744cc8..ico";
 
 /***/ })
 
@@ -764,4 +818,4 @@ controller.initializePage();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.8c293026a9a4289f622d.js.map
+//# sourceMappingURL=bundle.3a88179d0fabb07060e3.js.map

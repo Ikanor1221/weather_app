@@ -14,7 +14,7 @@ function createModel() {
   async function callApi(location) {
     //Receive and return API data
     const response = await fetch(
-      "http://api.weatherapi.com/v1/forecast.json?key=dd718f92e0a245e2932214841232007&q=" +
+      "https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=dd718f92e0a245e2932214841232007&q=" +
         location +
         "&days=3&aqi=no&alerts=no",
       { mode: "cors" }

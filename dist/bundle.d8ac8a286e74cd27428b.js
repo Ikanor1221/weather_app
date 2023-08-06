@@ -98,7 +98,7 @@ function createModel() {
         while (1) switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return fetch("http://api.weatherapi.com/v1/forecast.json?key=dd718f92e0a245e2932214841232007&q=" + location + "&days=3&aqi=no&alerts=no", {
+            return fetch("https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=dd718f92e0a245e2932214841232007&q=" + location + "&days=3&aqi=no&alerts=no", {
               mode: "cors"
             });
           case 2:
@@ -1192,4 +1192,4 @@ controller.initializePage();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.e1523647102a51dbe0a0.js.map
+//# sourceMappingURL=bundle.d8ac8a286e74cd27428b.js.map

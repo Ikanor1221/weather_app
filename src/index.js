@@ -9,6 +9,10 @@ const model = createModel();
 const view = createView();
 const controller = createController(model, view);
 
-model.retreiveData();
+(async () => {
+  await model.retreiveData("Beirut");
+  console.log(model.currentLocation);
+  console.log(model.currentLocationWeather);
+})();
 
 controller.initializePage();

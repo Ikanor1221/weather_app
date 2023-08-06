@@ -26,10 +26,9 @@ function createModel() {
     return weatherData;
   }
 
-  async function retreiveData(location = "London") {
+  async function retreiveData(location = "Helsinki") {
     const weatherData = await callApi(location);
     formObjects(weatherData);
-
     return;
   }
 
@@ -55,14 +54,19 @@ function createModel() {
 
       currentLocationWeather.push(weatherDay);
     }
-
-    console.log(currentLocation);
-    console.log(currentLocationWeather);
   }
 
-  // function parseData
+  return {
+    retreiveData,
 
-  return { retreiveData };
+    get currentLocation() {
+      return currentLocation;
+    },
+
+    get currentLocationWeather() {
+      return currentLocationWeather;
+    },
+  };
 }
 
 export default createModel;

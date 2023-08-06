@@ -125,7 +125,9 @@ button:hover {
 
 #display {
     @include theme;
+    min-width: 100%;
     max-width: 100%;
+    min-height: 300px;
     height: auto;
     width: auto;
     padding: 10px;

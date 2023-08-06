@@ -13,15 +13,15 @@ function createView() {
     <p>${weatherObject.date}</p>
     <img src="${weatherObject.icon}"</p/>
     <p>${weatherObject.weather}</p>
-    <p>${weatherObject.temperature}</p>
-    <p>Humidity: ${weatherObject.humidity}</p>
-    <p>Wind: ${weatherObject.wind}</p>
+    <p>${weatherObject.temperature}°C</p>
+    <p>Humidity: ${weatherObject.humidity}%</p>
+    <p>Wind: ${weatherObject.wind}km/h</p>
   </div>`;
   }
 
   function returnEmptyCardHtml() {
     return `<div class="card">
-    <p class="placeholder">Unavailable due to API limitations</p>
+    <p class="placeholder">Unavailable due to free API limitations</p>
   </div>`;
   }
 

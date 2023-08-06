@@ -41,6 +41,7 @@ function createModel() {
     //Form weather day objects and update current location
     currentLocation = weatherData.location.name;
 
+    //Only use forcast and avag values for current day as well
     for (let n = 0; n <= 2; n++) {
       let date = weatherData.forecast.forecastday[n].date;
       let icon =

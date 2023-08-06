@@ -1,10 +1,12 @@
 function createController(model, view) {
+  //Page initialization at start
   function initializePage() {
     view.renderInitialPage();
     initializeForm();
     return;
   }
 
+  //Form initialization at start
   function initializeForm() {
     const form = document.getElementById("menu");
     form.addEventListener("click", (e) => {
@@ -13,13 +15,9 @@ function createController(model, view) {
 
     const searchField = document.getElementById("search_field");
     searchField.value = "Helsinki";
-    searchField.addEventListener("click", (e) => {
-      e.preventDefault();
-    });
 
     const searchBtn = document.getElementById("search_btn");
     searchBtn.addEventListener("click", async (e) => {
-      e.preventDefault();
       await model.retreiveData(searchField.value);
       view.renderCards(model.currentLocationWeather, model.currentLocation);
       searchField.value = "";

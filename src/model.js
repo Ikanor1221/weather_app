@@ -1,17 +1,9 @@
 function createModel() {
+  let currentLocation = "";
   const currentLocationWeather = [];
 
-  function createWeatherDay(
-    name,
-    date,
-    icon,
-    weather,
-    temperature,
-    humidity,
-    wind
-  ) {
+  function createWeatherDay(date, icon, weather, temperature, humidity, wind) {
     return {
-      name,
       date,
       icon,
       weather,
@@ -42,13 +34,30 @@ function createModel() {
   }
 
   function formObjects(weatherData) {
-    console.log(weatherData.location.name);
-    console.log(weatherData.forecast.forecastday[0].date);
-    console.log(weatherData.forecast.forecastday[0].day.condition.icon);
+    currentLocation = weatherData.location.name;
 
-    // let name;
-    // date, icon, weather, temperature, humidity, wind
-    // createWeatherDay(name, date, icon, weather, temperature, humidity, wind);
+    for (let n = 0; n <= 2; n++) {
+      let date = weatherData.forecast.forecastday[n].date;
+      let icon = weatherData.forecast.forecastday[n].day.condition.icon;
+      let weather = weatherData.forecast.forecastday[n].day.condition.text;
+      let temperature = weatherData.forecast.forecastday[n].day.avgtemp_c;
+      let humidity = weatherData.forecast.forecastday[n].day.avghumidity;
+      let wind = weatherData.forecast.forecastday[n].day.maxwind_kph;
+
+      let weatherDay = createWeatherDay(
+        date,
+        icon,
+        weather,
+        temperature,
+        humidity,
+        wind
+      );
+
+      currentLocationWeather.push(weatherDay);
+    }
+
+    console.log(currentLocation);
+    console.log(currentLocationWeather);
   }
 
   // function parseData

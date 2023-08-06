@@ -13,6 +13,10 @@ const controller = createController(model, view);
   await model.retreiveData();
   console.log(model.currentLocation);
   console.log(model.currentLocationWeather);
+
+  console.log(model.currentLocationWeather);
+
+  view.renderCards(model.currentLocationWeather, model.currentLocation);
 })();
 
 controller.initializePage();

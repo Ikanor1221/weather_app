@@ -2,15 +2,13 @@ function createModel() {
   let currentLocation = "";
   const currentLocationWeather = [];
 
-  function createWeatherDay(date, icon, weather, temperature, humidity, wind) {
-    return {
-      date,
-      icon,
-      weather,
-      temperature,
-      humidity,
-      wind,
-    };
+  function WeatherDay(date, icon, weather, temperature, humidity, wind) {
+    this.date = date;
+    this.icon = icon;
+    this.weather = weather;
+    this.temperature = temperature;
+    this.humidity = humidity;
+    this.wind = wind;
   }
 
   async function callApi(location) {
@@ -44,13 +42,14 @@ function createModel() {
 
     for (let n = 0; n <= 2; n++) {
       let date = weatherData.forecast.forecastday[n].date;
-      let icon = weatherData.forecast.forecastday[n].day.condition.icon;
+      let icon =
+        "https:" + weatherData.forecast.forecastday[n].day.condition.icon;
       let weather = weatherData.forecast.forecastday[n].day.condition.text;
       let temperature = weatherData.forecast.forecastday[n].day.avgtemp_c;
       let humidity = weatherData.forecast.forecastday[n].day.avghumidity;
       let wind = weatherData.forecast.forecastday[n].day.maxwind_kph;
 
-      let weatherDay = createWeatherDay(
+      let weatherDay = new WeatherDay(
         date,
         icon,
         weather,

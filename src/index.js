@@ -10,7 +10,7 @@ const view = createView();
 const controller = createController(model, view);
 
 (async () => {
-  await model.retreiveData("Beirut");
+  await model.retreiveData();
   console.log(model.currentLocation);
   console.log(model.currentLocationWeather);
 })();

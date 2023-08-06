@@ -21,18 +21,25 @@ function createModel() {
         "&days=3&aqi=no&alerts=no",
       { mode: "cors" }
     );
-
+    // If wrong input then throw error
+    if (!response.ok) throw new Error("Wrong location!");
     const weatherData = await response.json();
     return weatherData;
   }
 
   async function retreiveData(location = "Helsinki") {
-    const weatherData = await callApi(location);
-    formObjects(weatherData);
-    return;
+    // Retrieve data from API with possible error handled and script stopped
+    try {
+      const weatherData = await callApi(location);
+      formObjects(weatherData);
+      return;
+    } catch (e) {
+      alert(e);
+    }
   }
 
   function formObjects(weatherData) {
+    //Form weather day objects and update current location
     currentLocation = weatherData.location.name;
 
     for (let n = 0; n <= 2; n++) {
@@ -51,8 +58,7 @@ function createModel() {
         humidity,
         wind
       );
-
-      currentLocationWeather.push(weatherDay);
+      currentLocationWeather[n] = weatherDay;
     }
   }
 

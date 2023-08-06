@@ -33,6 +33,7 @@ function createModel() {
       return;
     } catch (e) {
       alert(e);
+      return;
     }
   }
 

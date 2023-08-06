@@ -12,9 +12,9 @@ function createController(model, view) {
     });
 
     const searchField = document.getElementById("search_field");
+    searchField.value = "Helsinki";
     searchField.addEventListener("click", (e) => {
       e.preventDefault();
-      searchField.value = "Helsinki";
     });
 
     const searchBtn = document.getElementById("search_btn");
